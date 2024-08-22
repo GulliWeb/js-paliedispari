@@ -3,6 +3,7 @@ let word = ''
 
 // Funzione che determina se una parola data in input è palindroma 
 function palindroma() {
+    let mes = ''
 
     word = document.getElementById('txtPal').value.trim().toLowerCase()
 
@@ -19,8 +20,9 @@ function palindroma() {
     }
 
     // Ternario condizioni
-    word === reversedWord ? alert(`La parola: ${word} è palindroma`) : alert(`La parola: ${word} non è palindroma`)
+    word === reversedWord ? mes = (`La parola: ${word} è palindroma`) : mes = (`La parola: ${word} non è palindroma`)
     console.log(reversedWord)
+    document.getElementById('resultPal').innerText = mes
 }
 
 
