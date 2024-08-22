@@ -51,7 +51,7 @@ function pariDispari(choose_f, userNumber_f) {
         mess = (`Il giocatore ha perso! La somma: ${somma} è dispari!`);
     }
     console.log(choose_f, userNumber_f);
-    res.innerText += mess
+    res.innerText = mess
 }
 
 document.getElementById('btnPariDispari').addEventListener('click', function() {
