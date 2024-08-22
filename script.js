@@ -1,27 +1,27 @@
-// // Dichiarazione parametro da passare alla funzione 
-// let word = ''
+// Dichiarazione parametro da passare alla funzione 
+let word = ''
 
-// // Funzione che determina se una parola data in input è palindroma 
-// function palindroma(word) {
+// Funzione che determina se una parola data in input è palindroma 
+function palindroma() {
 
-//     word = document.getElementById('txtPal').value.trim().toLowerCase()
+    word = document.getElementById('txtPal').value.trim().toLowerCase()
 
-//     // Controllo campo parola dal DOM
-//     if (!word || !isNaN(word)) {
-//         alert('Attenzione! inserire correttamente una parola!')
-//         return
-//     }
+    // Controllo campo parola dal DOM
+    if (!word || !isNaN(word)) {
+        alert('Attenzione! inserire correttamente una parola!')
+        return
+    }
         
-//     let reversedWord = ''
+    let reversedWord = ''
 
-//     for (let i = word.length - 1; i >= 0 ; i--) {
-//         reversedWord += word[i]
-//     }
+    for (let i = word.length - 1; i >= 0 ; i--) {
+        reversedWord += word[i]
+    }
 
-//     // Ternario condizioni
-//     word === reversedWord ? alert(`La parola: ${word} è palindroma`) : alert(`La parola: ${word} non è palindroma`)
-//     console.log(reversedWord)
-// }
+    // Ternario condizioni
+    word === reversedWord ? alert(`La parola: ${word} è palindroma`) : alert(`La parola: ${word} non è palindroma`)
+    console.log(reversedWord)
+}
 
 
 
@@ -42,27 +42,30 @@ console.log("L'utente ha scelto: " + choose)
 let userNumber = parseInt(prompt('Ora scegli un numero tra 1 e 5 '))
 console.log("L'utente ha scelto il numero: " + userNumber)
 
-function pariDispari(choose, userNumber) {
+pariDispari(choose, userNumber)
+
+function pariDispari(choose_f, userNumber_f) {
+    console.log(choose_f, userNumber_f)
     let somma = 0 
-    const rnd = Math.floor(Math.random() * 5) + 1
+    const rnd = parseInt(Math.floor(Math.random() * 5) + 1)
     console.log("Il numero random generato è: " + rnd)
 
-    somma = rnd + userNumber
+    somma = rnd + userNumber_f
     console.log("La somma è: " + somma)
 
-    if (somma % 2 === 0 && userChoose == 'pari') {
+    if (somma % 2 === 0 && choose_f == 'pari') {
         alert('Il giocatore ha vinto! la somma è pari')
-    } else if (somma % 2 !== 0 && userChoose == 'dispari' ) {
+    } else if (somma % 2 !== 0 && choose_f == 'dispari' ) {
         alert('Il giocatore ha vinto! il numero è dispri')
-    } else if (somma % 2 === 0 && userChoose == 'dispari') {
+    } else if (somma % 2 === 0 && choose_f == 'dispari') {
         alert('Il giocatore ha perso! il numero è pari!')
-    } else if (somma % 2 !== 0 && userChoose == 'pari') {
+    } else if (somma % 2 !== 0 && choose_f == 'pari') {
         alert('Il giocatore ha perso! il numero è dispari!')
 
     }
-    console.log(choose, userNumber)
+    console.log(choose_f, userNumber_f)
 }
 
-pariDispari()
+
 
 
