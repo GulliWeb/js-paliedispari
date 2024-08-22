@@ -1,13 +1,17 @@
-// Dichiarazione parametro da passare alla funzione con controllo
-let word =''
-do {
-    word = prompt('Inserisci una parola').trim()
+// Dichiarazione parametro da passare alla funzione 
+let word = ''
 
- if (!word || !isNaN(word)) alert('Attenzione! inserire correttamente una parola!')
-} while (!word || !isNaN(word));
-
-// Funzione che determina se una parola data in input è palindroma
+// Funzione che determina se una parola data in input è palindroma 
 function palindroma(word) {
+
+    word = document.getElementById('txtPal').value
+
+    // Controllo campo parola dal DOM
+    if (!word || !isNaN(word)) {
+        alert('Attenzione! inserire correttamente una parola!')
+        return
+    }
+        
     let reversedWord = ''
 
     for (let i = word.length - 1; i >= 0 ; i--) {
@@ -19,6 +23,10 @@ function palindroma(word) {
     console.log(reversedWord)
 }
 
-palindroma(word)
+
+
+// SNACK 2 
+// Dichiarazione e raccolta di parametri
+
 
 
