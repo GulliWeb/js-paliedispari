@@ -37,19 +37,20 @@ function pariDispari(choose_f, userNumber_f) {
     somma = rnd + userNumber_f;
     console.log("La somma è: " + somma);
 
-      let mess 
+    let res = document.getElementById('result') 
+    let mess 
+
     // Controlli per stabilire il vincitore
     if (somma % 2 === 0 && choose_f === 'pari') {
-        mess = alert(`Il giocatore ha vinto! La somma ${somma} è pari`);
+        mess = `Il giocatore ha vinto! La somma: ${somma} è pari!`;
     } else if (somma % 2 !== 0 && choose_f === 'dispari') {
-       mess = alert(`Il giocatore ha vinto! La somma ${somma} è dispari`);
+       mess = `Il giocatore ha vinto! La somma: ${somma} è dispari!`;
     } else if (somma % 2 === 0 && choose_f === 'dispari') {
-        mess = alert(`Il giocatore ha perso! La somma ${somma} è pari!`);
+        mess = (`Il giocatore ha perso! La somma: ${somma} è pari!`);
     } else if (somma % 2 !== 0 && choose_f === 'pari') {
-        mess = alert(`Il giocatore ha perso! La somma ${somma} è dispari!`);
+        mess = (`Il giocatore ha perso! La somma: ${somma} è dispari!`);
     }
     console.log(choose_f, userNumber_f);
-    let res = document.getElementById('result') 
     res.innerText += mess
 }
 
