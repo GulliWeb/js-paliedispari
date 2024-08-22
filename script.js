@@ -20,7 +20,7 @@ function palindroma() {
     }
 
     // Ternario condizioni
-    word === reversedWord ? mes = (`La parola: ${word} è palindroma`) : mes = (`La parola: ${word} non è palindroma`)
+    word === reversedWord ? mes = (`La parola "${word}" è palindroma`) : mes = (`La parola "${word}" non è palindroma`)
     console.log(reversedWord)
     document.getElementById('resultPal').innerText = mes
 }
